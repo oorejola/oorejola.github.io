@@ -19,5 +19,6 @@ Some informal non-*mathy* interests:
 *   Skateboarding
 *   Music
 *   Art
-*   My cat, Mochi
+*   Cooking
+*   Mochi, my cat (and the food)
 
