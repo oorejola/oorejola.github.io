@@ -12,6 +12,7 @@ To list a few of my interests:
 *   Random Matrix Theory
 *   Statistical (Machine) Learning 
 *   Generative Models
+*   Spectral Clustering
 *   Physics Informed Neural Networks
 
 Some informal non-*mathy* interests:
