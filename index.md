@@ -5,21 +5,19 @@ layout: default
 
 # About Me
 
-I'm currently a Ph.D at student studying mathematics at Tulane University. However, I like to consider myself a math enthusiast. When out of the office I enjoy long walks on the beach and relaxing with my cat, Mochi. My current research focuses on the asymptotic behavior of high-dimensional self-similar stochastic processes. In particular, I am investigating the asymptotic behavior of the eigenvalue distribution of large wavelet sample covariance matrices for ensembles of fractional Brownian motion. Overall, I'm attracted to problems that can be characterized in the context of high-dimensional probability theory/statistics. 
-
+I am currently pursuing my Ph.D. in mathematics at Tulane University, with an expected graduation date in May 2024. My journey is driven by a profound passion for mathematics and the sciences, motivating me to continually seek opportunities for expanding my knowledge and pushing my boundaries. At present, my research focuses on investigating the asymptotic properties of high-dimensional self-similar stochastic processes. Specifically, I am immersed in the study of the eigenvalue distribution of large wavelet sample covariance matrices for ensembles of self-similar stochastic processes, such as fractional Brownian motion. My overarching interest revolves around tackling challenges within the domain of high-dimensional probability theory and statistics.
 To list a few of my interests:
 
+*   Time Series Analysis
 *   Random Matrix Theory
-*   Statistical (Machine) Learning 
-*   Generative Models
-*   Spectral Clustering
-*   Physics Informed Neural Networks
+*   Matroid Theory
+*   Game Theory 
+*   Machine Learning 
 
 Some informal non-*mathy* interests:
 
 *   Skateboarding
-*   Music
 *   Art
 *   Cooking
-*   Mochi, my cat (no offense to the dessert)
+
 
