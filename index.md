@@ -4,13 +4,13 @@ layout: default
 
 # About Me
 
-I am human pursuing a Ph.D. in mathematics at Tulane University. (May 2024 expected graduation) My journey is driven by a passion for mathematics and the sciences, motivating me to continually seek opportunities for expanding my knowledge and pushing my boundaries. At present, my graduate research focuses on investigating the asymptotic properties of high-dimensional stochastic processes. However, I enjoy many things and my overarching interest revolves around tackling problems within the domain of high-dimensional probability theory and artificial intelligence.
+I am pursuing a Ph.D. in mathematics at Tulane University. (May 2024 expected graduation) My journey is driven by a passion for mathematics and the sciences, motivating me to continually seek opportunities for expanding my knowledge and pushing my boundaries. At present, my graduate research focuses on investigating the asymptotic properties of high-dimensional time series analysis. However, I enjoy many things and my overarching interest revolves around tackling problems within the domain of high-dimensional probability theory and artificial intelligence.
 
 To list a few of my interests:
 
 -   Time Series Analysis
 -   Random Matrix Theory
--   Deep Learning
+-   Machine Learning
 
 Some informal non-*mathy* interests:
 
