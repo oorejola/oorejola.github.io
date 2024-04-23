@@ -36,6 +36,8 @@ Some informal non-*mathy* interests:
 <br/><br/>
 
 ### A funny conversation between Alice and Bob, two GPT 3.5s.
+A link to the code is [here](https://github.com/oorejola/Alice_and_Bob/blob/main/Chatbots.ipynb).
+
 
 **Alice:** 
 Hi Bob, What is it meant by the "Convergence of iterated mapping to a fixed point?"
