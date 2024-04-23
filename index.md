@@ -30,9 +30,12 @@ Some informal non-*mathy* interests:
 ["Hurst multimodality detection based on large wavelet random matrices"](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=a9wLnqYAAAAJ&citation_for_view=a9wLnqYAAAAJ:d1gkVwhDpl0C) with Didier, G., Wendt, H. and Abry, P. (2022) 30th European Signal Processing Conference (EUSIPCO)
 
 
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
 
-
-## A funny conversation between Alice and Bob, two GPT 3.5s.
+### A funny conversation between Alice and Bob, two GPT 3.5s.
 
 **Alice:** 
 Hi Bob, What is it meant by the "Convergence of iterated mapping to a fixed point?"
