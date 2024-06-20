@@ -3,7 +3,7 @@ layout: default
 title: CV
 ---
 
-(last update: 10/4/2023)
+(last update: 6/20/2024)
 
 <!--<style>
 .pdfobject-container {    
