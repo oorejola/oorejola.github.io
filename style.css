@@ -1,0 +1,73 @@
+body {
+	font-family: 'Gill Sans', 'verdana';
+	font-size: 22px;
+	font-weight: 300;
+}
+
+p {
+	text-align: justify;
+
+}
+html {
+	font-size: 110%;
+}
+
+@media(min-width:60em){html{font-size: 90%}}
+
+
+.main {
+	width: 60%;
+	height: 75%;
+	min-width: 300px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    /*border: 3px solid #666666;		*/
+	margin: auto;
+	padding: 2% 2% 2% 2%;
+}
+
+.bold {
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+	color: #000033; /*#A19696;*/ /*#666666;*/
+	font-weight: 400;
+}
+
+a:hover {
+    color: #4C4C4C;      /*#006699;*/
+}
+
+ul {
+	margin: 5px;
+}
+
+/*li {
+	list-style-type: none;
+}
+*/
+table {
+	font-size: 75%;
+}
+
+table.teaching {
+	font-size: 95%;
+}
+
+td {
+        vertical-align: top;
+        padding-right: 10px;
+        padding-bottom: 9px;
+        font-weight: 300;
+
+}
+
+table.publications tr:nth-child(even) {
+        background-color: #EEEEEE;
+
+}
