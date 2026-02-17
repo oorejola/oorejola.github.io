@@ -83,9 +83,9 @@ table.publications tr:nth-child(even) {
 }
 
 #mp-canvas {
-	width: 300px;
+	width: auto;
 	height: 200px;
-	flex-shrink: 0;
+	display: block;
 }
 
 @media (max-width: 600px) {
@@ -94,7 +94,6 @@ table.publications tr:nth-child(even) {
 	}
 	#mp-canvas {
 		width: 100%;
-		max-width: 300px;
-		align-self: center;
+		height: 150px;
 	}
 }
