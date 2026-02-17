@@ -71,3 +71,30 @@ table.publications tr:nth-child(even) {
         background-color: #EEEEEE;
 
 }
+
+.header-row {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+}
+
+.header-text {
+	flex: 1;
+}
+
+#mp-canvas {
+	width: 300px;
+	height: 200px;
+	flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+	.header-row {
+		flex-direction: column;
+	}
+	#mp-canvas {
+		width: 100%;
+		max-width: 300px;
+		align-self: center;
+	}
+}

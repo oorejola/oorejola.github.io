@@ -5,6 +5,8 @@
 	</head>
 	<body>
 		<div class="main">
+			<div class="header-row">
+			<div class="header-text">
 			Oliver Orejola  &nbsp;
             <br>
 			<script type="text/javascript" language="javascript"> // Email obfuscator script 2.1 by Tim Williams, University of Arizona
@@ -17,7 +19,7 @@
 				      ltr = coded.charAt(i)
 				      link += (ltr)
 				    }
-				    else { 
+				    else {
 				      ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
 				      link += (key.charAt(ltr))
 				    }
@@ -30,13 +32,16 @@
 			<br>
 			<font size=+2>
 			<a href="cv.pdf">cv</a> &nbsp; <a href="https://scholar.google.com/citations?user=a9wLnqYAAAAJ&hl=en">scholar</a> &nbsp; <a href="https://github.com/oorejola">github</a>  &nbsp; <a href="https://www.linkedin.com/in/oliver-orejola/">linkedin</a> &nbsp; <a href="#publications">publications</a></font>
+			</div>
+			<a href="https://en.wikipedia.org/wiki/Marchenko%E2%80%93Pastur_distribution"><canvas id="mp-canvas" width="300" height="200"></canvas></a>
+		</div>
 			<br><br><br>
 
             <p>
-            I am a researcher with an affinity for physics, computer science and mathematics. I enjoy building things and solving problems.
-            As an undergraduate at Univeristy of Colorado, I studied adiabatic quantum computation and category theory.
+            I am a researcher with an affinity for mathematics, computer science and physics. I enjoy building things and solving problems.
+            As an undergraduate at the University of Colorado, I studied adiabatic quantum computation and category theory.
             My Ph.D. thesis at Tulane focused on time-series analysis and machine learning in a high-dimensional setting.
-            My overarching interest revolves around tackling problems within the domain deep learning and explainable AI.
+            Currently, I'm interested in prediction markets and agentic systems.
 			</p>
 			
 			<br><br>
@@ -53,7 +58,7 @@
 					<tr>
 						<td>machine learning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 						<td>mult-agent LLMs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td>RAG systems </td>
+						<td>prediction markets </td>
 					</tr>
 					<tr>
 						<td>skateboarding &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -80,47 +85,47 @@
 <table class='publications' border=0>
 
 <tr><td>
-<a href="https://arxiv.org/abs/2401.02815">On the empirical spectral distribution of large wavelet random matrices based on mixed-Gaussian fractional measurements in moderately high dimensions</a>
+<a href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-30/issue-none/On-the-empirical-spectral-distribution-of-large-wavelet-random-matrices/10.1214/25-EJP1297.full">On the empirical spectral distribution of large wavelet random matrices based on mixed-Gaussian fractional measurements in moderately high dimensions</a>
 <br>
-Orejola, O., Didier, G.,  Wendt, H. and Abry, P. 
+Orejola, O., Didier, G., Wendt, H. and Abry, P.
 <br>
- submitted: arXiv preprint (2024) 
+<i>Electron. J. Probab.</i> 30, 1&ndash;48 (2025)
 <br>
 </td></tr>
 
 <tr><td>
-Identifying high-dimensional self-similarity based on spectral clustering applied to large wavelet random matrices
+<a href="https://ieeexplore.ieee.org/document/10715019">Identifying high-dimensional self-similarity based on spectral clustering applied to large wavelet random matrices</a>
 <br>
-Orejola, O., Didier, G., Wendt, H., and Abry, P.
+Orejola, O., Didier, G., Wendt, H. and Abry, P.
 <br>
-to appear in 32th European Signal Processing Conference (EUSIPCO) (2024) 
+<i>32nd European Signal Processing Conference (EUSIPCO)</i>, 2024
 <br>
 </td></tr>
 
 <tr><td>
 <a href="https://gretsi.fr/data/colloque/pdf/2023_lucas1115.pdf">Bootstrap based test for the unimodality of estimated Hurst exponents. Performance assessment in high-dimensional analysis setting</a>
 <br>
-Lucas, C.G.,  Wendt, H., Abry, P.,Didier, G., and Orejola, O.,
+Lucas, C.G., Wendt, H., Abry, P., Didier, G. and Orejola, O.
 <br>
-XXIXème Colloque Francophone de Traitement du Signal et des Images (GRETSI) (2023)
+<i>XXIXème Colloque Francophone de Traitement du Signal et des Images (GRETSI)</i>, 2023
 <br>
 </td></tr>
 
 <tr><td>
 <a href="https://www.ijcai.org/proceedings/2023/0368.pdf">Shhh! The Logic of Clandestine Operations</a>
 <br>
-Naumov, P., Oliver, O.
+Naumov, P. and Orejola, O.
 <br>
-32nd International Joint Conference on Artificial Intelligence (IJCAI) (2023) 
+<i>32nd International Joint Conference on Artificial Intelligence (IJCAI)</i>, 2023
 <br>
 </td></tr>
 
 <tr><td>
 <a href="https://ieeexplore.ieee.org/abstract/document/9909932">Hurst multimodality detection based on large wavelet random matrices</a>
 <br>
-Didier, G., Orejola, O., Wendt, H., and Abry, P.
+Didier, G., Orejola, O., Wendt, H. and Abry, P.
 <br>
-30th European Signal Processing Conference (EUSIPCO) (2022) 
+<i>30th European Signal Processing Conference (EUSIPCO)</i>, 2022
 <br>
 </td></tr>
 
@@ -128,5 +133,6 @@ Didier, G., Orejola, O., Wendt, H., and Abry, P.
 </table>
 </font>
 		</div>
+	<script src="mp.js"></script>
 	</body>
 </html>
