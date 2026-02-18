@@ -38,11 +38,12 @@
 			As $n, m \to \infty$ with $n/m \to \gamma \in (0, 1]$, the
 			empirical distribution of the eigenvalues of $S$ converges almost
 			surely to the Marchenko-Pastur distribution with density
-			$$f(x) = \frac{1}{2\pi\gamma x}\sqrt{(\lambda_+ - x)(x - \lambda_-)}, \qquad x \in [\lambda_-, \lambda_+],$$
+			$$f(x) = \frac{1}{2\pi\gamma x}\sqrt{(\lambda_+ - x)(x - \lambda_-)}$$
 			where
-			$$\lambda_\pm = (1 \pm \sqrt{\gamma})^2.$$
+			$$x \in [\lambda_-, \lambda_+],\ \text{and} \ \lambda_\pm = (1 \pm \sqrt{\gamma})^2.$$
 			The animation uses $\gamma = 1/2$ (i.e., $m = 2n$), giving
-			support $[(1 - 1/\sqrt{2})^2,\; (1 + 1/\sqrt{2})^2] \approx [0.086, 2.914]$.
+			support 
+			$$[(1 - 1/\sqrt{2})^2,\; (1 + 1/\sqrt{2})^2].$$
 			</p>
 
 
@@ -105,7 +106,7 @@
 			and $c = 1/\sqrt{9d}$, then repeatedly draw $x \sim N(0,1)$, form
 			$v = (1 + cx)^3$, and accept with probability based on a squeeze
 			test. For $\alpha < 1$, use the identity
-			$\text{Gamma}(\alpha, 1) \stackrel{d}{=} \text{Gamma}(\alpha+1,1) \cdot U^{1/\alpha}$
+			$$\text{Gamma}(\alpha, 1) \stackrel{d}{=} \text{Gamma}(\alpha+1,1) \cdot U^{1/\alpha}$$
 			where $U \sim \text{Uniform}(0,1)$.
 			</p>
 
@@ -130,31 +131,36 @@
 			</p>
 
 
-			<span class="bold">References</span>
+			References
+			<br><br>
 
-			<p>
-			Z. Bai and J. W. Silverstein,
-			<i>Spectral Analysis of Large Dimensional Random Matrices</i>,
-			Springer Series in Statistics, 2nd ed., 2010.
-			</p>
+<table class="publications" border=0>
 
-			<p>
-			I. Dumitriu and A. Edelman,
-			<a href="https://arxiv.org/abs/math-ph/0206043">Matrix models for beta ensembles</a>,
-			<i>J. Math. Phys.</i> 43 (2002), 5830&ndash;5847.
-			</p>
+<tr><td>
+Z. Bai and J. W. Silverstein,
+<i>Spectral Analysis of Large Dimensional Random Matrices</i>,
+Springer Series in Statistics, 2nd ed., 2010.
+</td></tr>
 
-			<p>
-			G. Marsaglia and T. A. Bray,
-			A convenient method for generating normal variables,
-			<i>SIAM Review</i> 6 (1964), 260&ndash;264.
-			</p>
+<tr><td>
+I. Dumitriu and A. Edelman,
+<a href="https://arxiv.org/abs/math-ph/0206043">Matrix models for beta ensembles</a>,
+<i>J. Math. Phys.</i> 43 (2002), 5830&ndash;5847.
+</td></tr>
 
-			<p>
-			G. Marsaglia and W. W. Tsang,
-			The ziggurat method for generating random variables,
-			<i>J. Statistical Software</i> 5 (2000), no. 8.
-			</p>
+<tr><td>
+G. Marsaglia and T. A. Bray,
+A convenient method for generating normal variables,
+<i>SIAM Review</i> 6 (1964), 260&ndash;264.
+</td></tr>
+
+<tr><td>
+G. Marsaglia and W. W. Tsang,
+The ziggurat method for generating random variables,
+<i>J. Statistical Software</i> 5 (2000), no. 8.
+</td></tr>
+
+</table>
 
 		</div>
 	</body>

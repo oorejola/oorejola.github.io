@@ -105,4 +105,8 @@ a:has(#mp-canvas) {
 		height: auto;
 		aspect-ratio: 3/2;
 	}
+	.main {
+		width: 92%;
+		padding: 2% 4%;
+	}
 }
