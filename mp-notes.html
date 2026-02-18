@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script>
+		MathJax = {
+			tex: {
+				inlineMath: [['$', '$']],
+				displayMath: [['$$', '$$']]
+			}
+		};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+	</head>
+	<body>
+		<div class="main">
+			<a href="index.html">&larr; home</a>
+			<br><br>
+
+			<span class="bold">The Marchenko-Pastur Animation</span>
+
+			<p>
+			The animation on the <a href="index.html">main page</a> visualizes a
+			fundamental result from random matrix theory: the
+			<i>Marchenko-Pastur law</i>. As the matrix dimension grows, the
+			histogram of eigenvalues of a sample covariance matrix converges to a
+			deterministic limiting density. The code uses a few nice tricks to do
+			this efficiently in the browser.
+			</p>
+
+
+			<span class="bold">The Marchenko-Pastur Law</span>
+
+			<p>
+			Let $X$ be an $n \times m$ matrix with i.i.d. $N(0,1)$ entries,
+			and form the sample covariance matrix
+			$$S = \frac{1}{m} X X^T.$$
+			As $n, m \to \infty$ with $n/m \to \gamma \in (0, 1]$, the
+			empirical distribution of the eigenvalues of $S$ converges almost
+			surely to the Marchenko-Pastur distribution with density
+			$$f(x) = \frac{1}{2\pi\gamma x}\sqrt{(\lambda_+ - x)(x - \lambda_-)}, \qquad x \in [\lambda_-, \lambda_+],$$
+			where
+			$$\lambda_\pm = (1 \pm \sqrt{\gamma})^2.$$
+			The animation uses $\gamma = 1/2$ (i.e., $m = 2n$), giving
+			support $[(1 - 1/\sqrt{2})^2,\; (1 + 1/\sqrt{2})^2] \approx [0.086, 2.914]$.
+			</p>
+
+
+			<span class="bold">The Dumitriu-Edelman Tridiagonal Model</span>
+
+			<p>
+			Naively, one would form the full $n \times m$ Gaussian matrix $X$,
+			compute $S = \frac{1}{m}XX^T$, and find its eigenvalues&mdash;an
+			$O(nm + n^2)$ operation at minimum. The animation instead exploits a
+			result of Dumitriu and Edelman: there exists an $n \times n$
+			tridiagonal matrix whose eigenvalues have exactly the same joint
+			distribution as those of $S$.
+			</p>
+
+			<p>
+			The construction is as follows. Let $B$ be the $n \times n$
+			bidiagonal matrix
+			$$B = \begin{pmatrix}
+			\chi_{m} & & & \\
+			\chi_{n-1} & \chi_{m-1} & & \\
+			& \chi_{n-2} & \chi_{m-2} & \\
+			& & \ddots & \ddots
+			\end{pmatrix}$$
+			where the $\chi_k$ entries are independent chi-distributed random
+			variables with $k$ degrees of freedom. Then the eigenvalues of
+			$$T = \frac{1}{m} B B^T$$
+			have the same joint distribution as those of $S = \frac{1}{m}XX^T$
+			(Theorem 3.1 in Dumitriu-Edelman). Since $B$ is bidiagonal, $T = \frac{1}{m}BB^T$ is
+			tridiagonal. In the code, with 0-indexing:
+			</p>
+			<ul>
+				<li>$B_{k,k} \sim \chi_{m-k}$</li>
+				<li>$B_{k,k+1} \sim \chi_{n-1-k}$</li>
+			</ul>
+			<p>
+			This reduces the problem to generating $O(n)$ random variates and
+			working with a tridiagonal matrix, rather than an $n \times m$ dense
+			one.
+			</p>
+
+
+			<span class="bold">Random Variate Generation</span>
+
+			<p>
+			The code needs to sample chi-distributed random variables, which it
+			builds up from simpler distributions:
+			</p>
+
+			<p>
+			<i>Normal random variables</i> are generated via the
+			<i>Marsaglia polar method</i>. Sample $u, v$ uniformly on $(-1,1)$
+			until $s = u^2 + v^2 < 1$. Then $u\sqrt{-2\log s/s}$ and
+			$v\sqrt{-2\log s/s}$ are independent $N(0,1)$ draws. The spare is
+			cached for the next call.
+			</p>
+
+			<p>
+			<i>Gamma random variables</i> use the <i>Marsaglia-Tsang method</i>.
+			For $\text{Gamma}(\alpha, 1)$ with $\alpha \geq 1$: set $d = \alpha - 1/3$
+			and $c = 1/\sqrt{9d}$, then repeatedly draw $x \sim N(0,1)$, form
+			$v = (1 + cx)^3$, and accept with probability based on a squeeze
+			test. For $\alpha < 1$, use the identity
+			$\text{Gamma}(\alpha, 1) \stackrel{d}{=} \text{Gamma}(\alpha+1,1) \cdot U^{1/\alpha}$
+			where $U \sim \text{Uniform}(0,1)$.
+			</p>
+
+			<p>
+			<i>Chi random variables</i> follow from the relation
+			$$\chi_k = \sqrt{2 \cdot \text{Gamma}(k/2, 1)}.$$
+			</p>
+
+
+			<span class="bold">Sturm Sequences for Eigenvalue Counting</span>
+
+			<p>
+			Rather than computing all $n$ eigenvalues and binning them, the code
+			counts how many eigenvalues fall in each histogram bin directly. For
+			a symmetric tridiagonal matrix with diagonal entries $a_k$ and
+			off-diagonal entries $b_k$, the <i>Sturm sequence</i> recurrence
+			$$q_0 = a_0 - x, \qquad q_k = (a_k - x) - \frac{b_{k-1}^2}{q_{k-1}}$$
+			has the property that the number of negative $q_k$ values equals
+			the number of eigenvalues strictly less than $x$. Evaluating this at
+			each bin boundary and taking differences gives the bin counts in
+			$O(n)$ per boundary&mdash;much cheaper than a full eigendecomposition.
+			</p>
+
+
+			<span class="bold">References</span>
+
+			<p>
+			Z. Bai and J. W. Silverstein,
+			<i>Spectral Analysis of Large Dimensional Random Matrices</i>,
+			Springer Series in Statistics, 2nd ed., 2010.
+			</p>
+
+			<p>
+			I. Dumitriu and A. Edelman,
+			<a href="https://arxiv.org/abs/math-ph/0206043">Matrix models for beta ensembles</a>,
+			<i>J. Math. Phys.</i> 43 (2002), 5830&ndash;5847.
+			</p>
+
+			<p>
+			G. Marsaglia and T. A. Bray,
+			A convenient method for generating normal variables,
+			<i>SIAM Review</i> 6 (1964), 260&ndash;264.
+			</p>
+
+			<p>
+			G. Marsaglia and W. W. Tsang,
+			The ziggurat method for generating random variables,
+			<i>J. Statistical Software</i> 5 (2000), no. 8.
+			</p>
+
+		</div>
+	</body>
+</html>
