@@ -144,6 +144,10 @@
 
 	function setupCanvas() {
 		var dpr = window.devicePixelRatio || 1;
+		var info = document.querySelector('.header-info');
+		if (info && window.innerWidth <= 600) {
+			canvas.style.height = info.offsetHeight + 'px';
+		}
 		var rect = canvas.getBoundingClientRect();
 		canvas.width = rect.width * dpr;
 		canvas.height = rect.height * dpr;

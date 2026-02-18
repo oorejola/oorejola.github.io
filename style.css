@@ -94,6 +94,6 @@ table.publications tr:nth-child(even) {
 	}
 	#mp-canvas {
 		width: 100%;
-		height: 150px;
+		/* height set dynamically by JS */
 	}
 }
