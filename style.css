@@ -88,12 +88,21 @@ table.publications tr:nth-child(even) {
 	display: block;
 }
 
+a:has(#mp-canvas) {
+	display: block;
+	width: fit-content;
+}
+
 @media (max-width: 600px) {
 	.header-row {
 		flex-direction: column;
 	}
+	a:has(#mp-canvas) {
+		width: 100%;
+	}
 	#mp-canvas {
 		width: 100%;
-		/* height set dynamically by JS */
+		height: auto;
+		aspect-ratio: 3/2;
 	}
 }

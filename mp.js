@@ -104,8 +104,9 @@
 	}
 
 	function draw() {
-		var w = canvas.width;
-		var h = canvas.height;
+		var dpr = window.devicePixelRatio || 1;
+		var w = canvas.width / dpr;
+		var h = canvas.height / dpr;
 		ctx.clearRect(0, 0, w, h);
 
 		var maxBin = 0;
@@ -144,10 +145,6 @@
 
 	function setupCanvas() {
 		var dpr = window.devicePixelRatio || 1;
-		var info = document.querySelector('.header-info');
-		if (info && window.innerWidth <= 600) {
-			canvas.style.height = info.offsetHeight + 'px';
-		}
 		var rect = canvas.getBoundingClientRect();
 		canvas.width = rect.width * dpr;
 		canvas.height = rect.height * dpr;
