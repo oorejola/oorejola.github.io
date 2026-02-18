@@ -20,7 +20,7 @@
 			<span class="bold">The Marchenko-Pastur Animation</span>
 
 			<p>
-			The animation on the <a href="index.html">main page</a> visualizes a
+			The animation on the <a href="index.html">home page</a> visualizes a
 			fundamental result from random matrix theory: the
 			<i>Marchenko-Pastur law</i>. As the matrix dimension grows, the
 			histogram of eigenvalues of a sample covariance matrix converges to a
@@ -85,7 +85,7 @@
 			</p>
 
 
-			<span class="bold">Random Variate Generation</span>
+			<span class="bold">Random Variable Generation</span>
 
 			<p>
 			The code needs to sample chi-distributed random variables, which it
@@ -102,17 +102,17 @@
 
 			<p>
 			<i>Gamma random variables</i> use the <i>Marsaglia-Tsang method</i>.
-			For $\text{Gamma}(\alpha, 1)$ with $\alpha \geq 1$: set $d = \alpha - 1/3$
+			For $\Gamma(\alpha, 1)$ with $\alpha \geq 1$: set $d = \alpha - 1/3$
 			and $c = 1/\sqrt{9d}$, then repeatedly draw $x \sim N(0,1)$, form
 			$v = (1 + cx)^3$, and accept with probability based on a squeeze
 			test. For $\alpha < 1$, use the identity
-			$$\text{Gamma}(\alpha, 1) \stackrel{d}{=} \text{Gamma}(\alpha+1,1) \cdot U^{1/\alpha}$$
+			$$\Gamma(\alpha, 1) \stackrel{d}{=} \Gamma(\alpha+1,1) \cdot U^{1/\alpha}$$
 			where $U \sim \text{Uniform}(0,1)$.
 			</p>
 
 			<p>
 			<i>Chi random variables</i> follow from the relation
-			$$\chi_k = \sqrt{2 \cdot \text{Gamma}(k/2, 1)}.$$
+			$$\chi_k = \sqrt{2 \cdot \Gamma(k/2, 1)}.$$
 			</p>
 
 
